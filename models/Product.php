@@ -195,7 +195,7 @@ class Product
                 availability = :availability, 
                 description = :description, 
                 is_new = :is_new, 
-                is_recommended = :is_recommended, 
+                is_recomended = :is_recomended, 
                 status = :status
             WHERE id = :id";
 
@@ -209,7 +209,7 @@ class Product
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
-        $result->bindParam(':is_recommended', $options['is_recommended'], PDO::PARAM_INT);
+        $result->bindParam(':is_recomended', $options['is_recomended'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
         return $result->execute();
     }
@@ -235,7 +235,7 @@ class Product
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
-        $result->bindParam(':is_recommended', $options['is_recommended'], PDO::PARAM_INT);
+        $result->bindParam(':is_recomended', $options['is_recomended'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
         if ($result->execute()) {
 
