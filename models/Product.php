@@ -221,10 +221,10 @@ class Product
 
         $sql = 'INSERT INTO product '
             . '(name, code, price, category_id, brand, availability,'
-            . 'description, is_new, is_recommended, status)'
+            . 'description, is_new, is_recomended, status)'
             . 'VALUES '
             . '(:name, :code, :price, :category_id, :brand, :availability,'
-            . ':description, :is_new, :is_recommended, :status)';
+            . ':description, :is_new, :is_recomended, :status)';
 
         $result = $db->prepare($sql);
         $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
